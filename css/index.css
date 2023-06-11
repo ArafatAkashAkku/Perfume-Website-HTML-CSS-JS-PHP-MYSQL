@@ -1,0 +1,386 @@
+/* css reset start */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* css reset end */
+
+/* html start  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* html end  */
+
+/* header start  */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+header .fa-solid {
+    display: none;
+}
+
+header .left {
+    margin-left: 30px;
+}
+
+header .left a h1 {
+    font-size: 30px;
+    color: darkorchid;
+    cursor: pointer;
+}
+
+header .right nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-right: 70px;
+}
+
+header .right nav ul li a {
+    font-size: 21px;
+    color: darkorchid;
+    cursor: pointer;
+    padding: 3px 9px;
+    font-weight: bold;
+}
+
+header .right nav ul li a.active {
+    border-bottom: 2px solid darkorchid;
+}
+
+/* header end  */
+
+/* progress bar start  */
+
+.progress {
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    z-index: 1000;
+}
+
+.highlight {
+    transition: width 0.5s linear;
+    width: 0%;
+    background-color: darkorchid;
+    height: 100%;
+}
+
+/* progress bar end  */
+
+/* slideshow start  */
+
+.slideshow-container {
+    max-width: 1000px;
+    /* position: relative; */
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img{
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* slideshow end  */
+
+/* service section start  */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#services .upper h1 {
+    font-size: 30px;
+    color: black;
+}
+
+#services .lower {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+#services .lower .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 15px 0px;
+    background-color: blueviolet;
+}
+
+#services .lower .feature h3 {
+    font-size: 20px;
+    color: black;
+}
+
+#services .lower .feature img {
+    width: 40%;
+}
+
+#services .lower .feature a {
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    padding: 5px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* service section end  */
+
+/* contact section start */
+
+#contact {
+    background-color: rgb(26, 16, 16);
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+#contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    text-align: center;
+}
+
+#contact .contact-info h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#contact .contact-info p {
+    color: white;
+    font-size: 17px;
+}
+
+#contact .contact-info form {
+    width: 100%;
+}
+
+#contact .contact-info form input[type="email"] {
+    position: relative;
+    background-color: white;
+    outline: none;
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+#contact .contact-info form a {
+    position: absolute;
+    color: white;
+    padding: 10px 20px;
+    background-color: grey;
+    text-transform: uppercase;
+    border-radius: 20px;
+    right: 34%;
+    cursor: pointer;
+}
+
+/* contact section end */
+
+/* Back To Top button start  */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Back To Top button end  */
+
+/* footer start */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+footer h1 {
+    font-size: 30px;
+}
+
+footer p {
+    font-size: 17px;
+}
+
+footer .upper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px 80px;
+}
+
+footer .upper .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .upper .right {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+footer .upper .left ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .upper .left ul li a {
+    padding: 8px 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(1) a {
+    background-color: red;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(2) a {
+    background-color: blue;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(3) a {
+    background-color: #00acee;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(4) a {
+    background-color: green;
+    cursor: pointer;
+}
+
+footer .upper .left ul li:nth-child(5) a {
+    background-color: red;
+    cursor: pointer;
+}
+
+footer .upper .right .footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .upper .right .footer-link ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .upper .right .footer-link ul li a {
+    color: black;
+    cursor: pointer;
+}
+
+footer .lower {
+    background-color: black;
+    text-align: center;
+}
+
+footer .lower p {
+    color: white;
+}
+
+footer .lower a {
+    font-size: 20px;
+    color: yellow;
+    cursor: pointer;
+}
+
+/* footer end */
+
+/* custom scrollbar start */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid blue;
+}
+
+/* custom scrollbar end */
