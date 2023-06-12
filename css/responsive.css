@@ -19,6 +19,11 @@
 
 @media screen and (max-width:980px) {
 
+
+    #topbrands .lower {
+        flex-wrap: wrap;
+    }
+
     #contact .contact-info h1 {
         font-size: 20px;
     }
@@ -61,20 +66,28 @@
 
 @media screen and (max-width:950px) {
 
-    header .fa-solid {
+    header .right .fa-user {
         display: block;
         font-size: 35px;
-        color: darkorchid;
+        color: white;
+        margin-left: 100%;
+    }
+
+    header .fa-bars {
+        display: block;
+        font-size: 35px;
+        color: white;
         margin-right: 25px;
     }
 
     header .fa-xmark {
         font-size: 45px;
-        color: darkorchid;
+        color: white;
+        margin-right: 25px;
     }
 
-    header .right {
-        background: darkorchid;
+    header .middle {
+        background: black;
         position: absolute;
         top: 8vh;
         width: 100%;
@@ -87,23 +100,32 @@
         z-index: 50000;
     }
 
-    header .right.active {
+    header .middle.active {
         left: 0;
         transition: 0.5s;
     }
 
-    header .right nav ul {
+    header .middle nav ul {
         flex-direction: column;
         align-items: center;
         gap: 60px;
         margin: 0;
     }
 
-    header .right nav ul li a {
+    header .middle nav ul li a {
         background-color: white;
+        color: black;
         padding: 15px 25px;
         border-radius: 10px;
         border: none;
+    }
+
+    header .right p {
+        align-items: flex-end;
+    }
+
+    .slideshow .autoplay-progress {
+        display: none;
     }
 
     #services {
@@ -122,6 +144,10 @@
 
     footer .upper .right {
         flex-direction: column;
+    }
+
+    header .right p {
+        display: none;
     }
 
 }

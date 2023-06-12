@@ -12,9 +12,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- font awesome cdn 6.3.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- website title  -->
     <title>Website Title</title>
-
 </head>
 
 <body>
@@ -24,19 +25,22 @@
 
         <div class="left">
             <a href="#home">
-                <h1>Agency.</h1>
+                <h1>Website Title</h1>
             </a>
         </div>
-        <div class="right">
+        <div class="middle">
             <nav>
                 <ul>
                     <li><a class="active" href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-us">Why us</a></li>
+                    <li><a href="#topbrands">Top Brands</a></li>
+                    <li><a href="#category">Category</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="right">
+            <p>Sign in&nbsp;&nbsp;</p>
+            <i id="user-bar" class="fa-solid fa-user"></i>
         </div>
         <i id="phone-bar" class="fa-solid fa-bars"></i>
 
@@ -44,33 +48,42 @@
     <!-- header end -->
 
     <!-- progress bar start  -->
-    <div class="progress">
+    <!-- <div class="progress">
         <div class="highlight" id="bar-highlight"></div>
-    </div>
+    </div> -->
     <!-- progress bar start  -->
 
     <main>
 
         <!-- slideshow start  -->
-        <section>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="images/banner1.jpg">
+        <section id="home">
+            <div class="swiper slideshow">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/banner1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/banner2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/banner3.jpg">
+                    </div>
                 </div>
-
-                <div class="mySlides fade">
-                    <img src="images/banner2.jpg">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="images/banner3.jpg">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
                 </div>
             </div>
         </section>
         <!-- slideshow end  -->
 
         <!-- Top Brand section start  -->
-        <section id="services">
+        <section id="topbrands">
             <div class="upper">
                 <h1>Top Brands</h1>
             </div>
@@ -80,13 +93,11 @@
                     <h3>Dolce & Gabbana</h3>
                     <div><a>Learn More</a></div>
                 </div>
-
                 <div class="feature">
                     <img src="images/perfume.png" alt="perfume">
                     <h3>Calvin Clein</h3>
                     <div><a>Learn More</a></div>
                 </div>
-
                 <div class="feature">
                     <img src="images/perfume.png" alt="perfume">
                     <h3>Montblanc</h3>
@@ -99,13 +110,11 @@
                     <h3>Dolce & Gabbana</h3>
                     <div><a>Learn More</a></div>
                 </div>
-
                 <div class="feature">
                     <img src="images/perfume.png" alt="perfume">
                     <h3>Calvin Clein</h3>
                     <div><a>Learn More</a></div>
                 </div>
-
                 <div class="feature">
                     <img src="images/perfume.png" alt="perfume">
                     <h3>Montblanc</h3>
@@ -115,12 +124,208 @@
         </section>
         <!-- Top Brand section end  -->
 
+        <!-- Swiper for all brand start -->
+        <section id="category">
+            <h1 class="brand-title">All Brands</h1>
+            <div class="swiper all-brand">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/perfume.png" alt="">
+                        <h3>Calvin Clein</h3>
+                        <p>price 200</p>
+                        <a href="#">Add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- Swiper for all brand end -->
+
+            <!-- Swiper for men-women-brand start -->
+            <div class="men-women-brand">
+                <div class="swiper men-brand">
+                    <h1 class="brand-title">Men Brands</h1>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="swiper women-brand">
+                    <h1 class="brand-title">Women Brands</h1>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/perfume.png" alt="">
+                            <h3>Calvin Clein</h3>
+                            <p>price 200</p>
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Swiper for men-women-brand end -->
+
         <!-- contact section start  -->
         <section id="contact">
             <div class="contact-info">
                 <h1>Contact Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At impedit necessitatibus aperiam ratione
-                    <br> fugit, enim eaque error inventore vitae optio pariatur unde, qui provident? Sequi voluptates
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At impedit necessitatibus
+                    aperiam ratione
+                    <br> fugit, enim eaque error inventore vitae optio pariatur unde, qui provident? Sequi
+                    voluptates
                     numquam quas aspernatur ratione!
                 </p>
                 <form action="#">
@@ -197,13 +402,103 @@
     </footer>
     <!-- footer end -->
 
-
-
-
-
-
-
+    <!-- external js link  -->
     <script src="js/index.js"></script>
-</body>
+    <!-- swipper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- swipper js source code for swipper content  -->
+    <script>
+        // slideshow swipper 
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        const slideshowswiper = new Swiper(".slideshow", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
 
+        // all brand swipper 
+        const allbrandswiper = new Swiper('.all-brand', {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        // men brand swipper 
+        const menbrandswiper = new Swiper('.men-brand', {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        // women brand swipper 
+        const womenbrandswiper = new Swiper('.women-brand', {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+</body>
 </html>

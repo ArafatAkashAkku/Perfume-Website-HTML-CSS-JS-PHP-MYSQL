@@ -16,6 +16,11 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 /* html end  */
@@ -29,13 +34,13 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 8vh;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: transparent;
+    background-color: black;
     z-index: 1000;
 }
 
-header .fa-solid {
+header .fa-bars {
     display: none;
 }
 
@@ -45,28 +50,48 @@ header .left {
 
 header .left a h1 {
     font-size: 30px;
-    color: darkorchid;
+    color: white;
     cursor: pointer;
 }
 
-header .right nav ul {
+header .middle nav ul {
     display: flex;
     flex-direction: row;
     gap: 30px;
     margin-right: 70px;
 }
 
-header .right nav ul li a {
+header .middle nav ul li a {
     font-size: 21px;
-    color: darkorchid;
+    color: white;
     cursor: pointer;
     padding: 3px 9px;
     font-weight: bold;
 }
 
-header .right nav ul li a.active {
-    border-bottom: 2px solid darkorchid;
+header .right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
+
+header .right p {
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+    padding: 3px 9px;
+    font-weight: bold;
+}
+
+header .right .fa-user {
+    color: white;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+/* header .right nav ul li a.active {
+    border-bottom: 2px solid white;
+} */
 
 /* header end  */
 
@@ -91,40 +116,64 @@ header .right nav ul li a.active {
 
 /* slideshow start  */
 
-.slideshow-container {
-    max-width: 1000px;
-    /* position: relative; */
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img{
+.slideshow {
     width: 100%;
+    height: 50%;
+    position: relative;
+    margin-top:9vh;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.slideshow .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
+.slideshow .swiper-slide img {
+    display: block;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    to {
-        opacity: 1
-    }
+.slideshow .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.slideshow .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
 }
 
 /* slideshow end  */
 
-/* service section start  */
+/* top-brand section start  */
 
-#services {
+#topbrands {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -133,19 +182,19 @@ header .right nav ul li a.active {
     padding: 30px 0;
 }
 
-#services .upper h1 {
+#topbrands .upper h1 {
     font-size: 30px;
     color: black;
 }
 
-#services .lower {
+#topbrands .lower {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 0 10%;
 }
 
-#services .lower .feature {
+#topbrands .lower .feature {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,16 +204,16 @@ header .right nav ul li a.active {
     background-color: blueviolet;
 }
 
-#services .lower .feature h3 {
+#topbrands .lower .feature h3 {
     font-size: 20px;
     color: black;
 }
 
-#services .lower .feature img {
+#topbrands .lower .feature img {
     width: 40%;
 }
 
-#services .lower .feature a {
+#topbrands .lower .feature a {
     font-size: 17px;
     color: white;
     background-color: black;
@@ -173,7 +222,122 @@ header .right nav ul li a.active {
     cursor: pointer;
 }
 
-/* service section end  */
+/* top-brand section end  */
+
+ /* Swiper for all brand start  */
+
+ .all-brand {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.all-brand .swiper-slide {
+    text-align: center;
+    background: olive;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.all-brand .swiper-slide img {
+    width: 20%;
+}
+
+.all-brand .swiper-slide h3 {
+    font-size: 20px;
+}
+
+.all-brand .swiper-slide p {
+    font-size: 18px;
+}
+
+.all-brand .swiper-slide a {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.all-brand .swiper-button-next,
+.all-brand .swiper-button-prev {
+    position: absolute;
+}
+
+.brand-title{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+ /* Swiper for all brand end  */
+
+ /* Swiper for men-women-brand start  */
+
+.men-women-brand {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    margin-top: 75px;
+}
+
+.men-women-brand .men-brand, .men-women-brand .women-brand {
+    width: 50%;
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.men-women-brand .swiper-slide {
+    text-align: center;
+    background: olive;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 8px;
+}
+
+.men-women-brand .swiper-slide img {
+    width: 20%;
+}
+
+.men-women-brand .swiper-slide h3 {
+    font-size: 20px;
+}
+
+.men-women-brand .swiper-slide p {
+    font-size: 18px;
+}
+
+.men-women-brand .swiper-slide a {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.men-women-brand .swiper-button-next,
+.men-women-brand .swiper-button-prev {
+    position: absolute;
+    top: 60%;
+}
+
+ /* Swiper for men-women-brand end  */
 
 /* contact section start */
 

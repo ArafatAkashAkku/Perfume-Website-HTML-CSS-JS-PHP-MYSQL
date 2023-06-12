@@ -14,10 +14,10 @@ mybutton.onclick = () => {
 window.onscroll = () => {
     // scroll effect navbar
     if (scrollY > 80) {
-        navigationBar.style.backgroundColor = "black";
+        navigationBar.style.backgroundColor = "blue";
     }
     else {
-        navigationBar.style.backgroundColor = "transparent";
+        navigationBar.style.backgroundColor = "black";
     }
 
     // scroll progress bar
@@ -38,9 +38,8 @@ window.onscroll = () => {
 }
 
 // navigation bar on click effect 
-
 const phoneBar = document.getElementById('phone-bar');
-const phoneNav = document.querySelector('header .right');
+const phoneNav = document.querySelector('header .middle');
 
 phoneBar.onclick = () => {
     phoneNav.classList.toggle("active")
@@ -54,7 +53,7 @@ phoneBar.onclick = () => {
 }
 
 // navigation bar links on click effect 
-const navLinks = document.querySelectorAll('header .right ul li a');
+const navLinks = document.querySelectorAll('header .middle ul li a');
 
 navLinks.forEach((element) => {
     element.onclick = () => {
@@ -70,20 +69,4 @@ yearUpdate.innerHTML = new Date().getFullYear();
 // right click disable 
 document.oncontextmenu = (element) => {
     element.preventDefault();
-}
-
-// slideshow section 
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 4000);
 }
