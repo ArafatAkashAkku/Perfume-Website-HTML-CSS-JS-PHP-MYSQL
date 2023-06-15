@@ -14,7 +14,7 @@ mybutton.onclick = () => {
 window.onscroll = () => {
     // scroll effect navbar
     if (scrollY > 80) {
-        navigationBar.style.backgroundColor = "blue";
+        navigationBar.style.backgroundColor = "#00acee";
     }
     else {
         navigationBar.style.backgroundColor = "black";
@@ -70,3 +70,59 @@ yearUpdate.innerHTML = new Date().getFullYear();
 document.oncontextmenu = (element) => {
     element.preventDefault();
 }
+
+// sign in sign up section  
+const userbar = document.querySelectorAll(".user-bar");
+const signupcard = document.getElementById("sign-up-card");
+const signuppopup = document.getElementById("sign-up-pop-up");
+const signinpopup = document.getElementById("sign-in-pop-up");
+const hidecard = document.querySelectorAll(".hide-card");
+
+userbar.forEach((element) => {
+    element.onclick = () => {
+        signinpopup.classList.toggle("active");
+        signuppopup.classList.remove("active");
+    }
+});
+
+signupcard.onclick = () => {
+    signinpopup.classList.remove("active");
+    signuppopup.classList.add("active");
+}
+
+hidecard.forEach((element) => {
+    element.onclick = () => {
+        signinpopup.classList.remove("active");
+        signuppopup.classList.remove("active");
+    }
+});
+
+// cookie set 
+const cookieBox = document.querySelector(".cookie");
+const acceptBtn = document.querySelector(".cookie .right .accept");
+const rejectBtn = document.querySelector(".cookie .right .reject");
+
+setTimeout(() => {
+    cookieBox.style.visibility = "visible";
+}, 5000);
+
+rejectBtn.onclick = () => {
+    cookieBox.style.visibility = "hidden";
+    setTimeout(() => {
+        cookieBox.style.visibility = "visible";
+    }, 60000);
+}
+
+acceptBtn.onclick = () => {
+    document.cookie = "fname=Arafat; max-age=" + 60 * 60 * 24 * 30;
+    document.cookie = "lname=Akash; max-age=" + 60 * 60 * 24 * 30;
+    if (document.cookie) {
+        cookieBox.classList.add("hide");
+    }
+    else {
+        alert("Cookie can't be set");
+    }
+}
+
+let check = document.cookie.indexOf("fname=Arafat");
+check != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");

@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- favicon link  -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- font awesome cdn 6.3.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- manifest link  -->
+    <link rel="manifest" href="manifest.json">
     <!-- website title  -->
     <title>Website Title</title>
 </head>
@@ -39,23 +41,109 @@
             </nav>
         </div>
         <div class="right">
-            <p>Sign in&nbsp;&nbsp;</p>
-            <i id="user-bar" class="fa-solid fa-user"></i>
+            <p class="user-bar">Sign in&nbsp;&nbsp;</p>
+            <i class="fa-solid fa-user user-bar"></i>
         </div>
         <i id="phone-bar" class="fa-solid fa-bars"></i>
 
     </header>
     <!-- header end -->
 
-    <!-- progress bar start  -->
-    <!-- <div class="progress">
-        <div class="highlight" id="bar-highlight"></div>
-    </div> -->
-    <!-- progress bar start  -->
+    <!-- progress bar section start  -->
+    <section>
+        <div class="progress">
+            <div class="highlight" id="bar-highlight"></div>
+        </div>
+    </section>
+    <!-- progress bar section end  -->
+
+    <!-- sign in sign up section start  -->
+    <section>
+        <div id="sign-in-pop-up" class="active">
+            <div class="card">
+                <form action="#">
+                    <button>Sign in with google</button>
+                    <button>Sign in with facebook</button>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="" id="" placeholder="Enter email" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="" id="" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit">Sign in</button>
+                    <p>Don't have an account? <a id="sign-up-card">Sign up</a></p>
+                </form>
+                <i class="fa-solid fa-xmark hide-card"></i>
+            </div>
+        </div>
+
+        <div id="sign-up-pop-up">
+            <div class="card">
+                <form action="#">
+                    <div>
+                        <label for="email">Full Name</label>
+                        <input type="email" name="" id="" placeholder="Enter full name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="" id="" placeholder="Enter email" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Contact No</label>
+                        <input type="text" name="" id="" placeholder="Enter contact no" maxlength="15" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="" id="" placeholder="Enter password" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Confirm Password</label>
+                        <input type="password" name="" id="" placeholder="Confirm password" required>
+                        <p>Must be character</p>
+                    </div>
+                    <button type="submit">Sign up</button>
+                </form>
+                <i class="fa-solid fa-xmark hide-card"></i>
+            </div>
+        </div>
+    </section>
+    <!-- sign in sign up section end  -->
+
+    <!-- cookie set section start -->
+    <section>
+        <div class="cookie">
+
+            <div class="left">
+                <h2>Your Privacy</h2>
+                <p>
+                    We use cookies to personalise content and ads, to provide social
+                    media features and to analyse our traffic. We also share information
+                    about your use of our site with our social media, advertising and
+                    analytics partners. You can select your cookie preferences by
+                    clicking the buttons on the right.<span>Data Protection Portal</span>
+                </p>
+            </div>
+
+            <div class="right">
+                <button class="preference">Preference Center</button>
+                <button class="reject">Reject All</button>
+                <button class="accept">I'm OKAY with that</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- cookie set section end -->
 
     <main>
 
-        <!-- slideshow start  -->
+        <!-- slideshow section start  -->
         <section id="home">
             <div class="swiper slideshow">
                 <div class="swiper-wrapper">
@@ -80,7 +168,7 @@
                 </div>
             </div>
         </section>
-        <!-- slideshow end  -->
+        <!-- slideshow section end  -->
 
         <!-- Top Brand section start  -->
         <section id="topbrands">
@@ -124,64 +212,74 @@
         </section>
         <!-- Top Brand section end  -->
 
+        <!-- Category section start  -->
         <!-- Swiper for all brand start -->
         <section id="category">
-            <h1 class="brand-title">All Brands</h1>
+            <h1>All Brands</h1>
             <div class="swiper all-brand">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/perfume.png" alt="">
                         <h3>Calvin Clein</h3>
-                        <p>price 200</p>
+                        <p>Price: 200</p>
                         <a href="#">Add to cart</a>
+                        <i class="fa-sharp fa-regular fa-heart"></i>
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -192,61 +290,56 @@
             <!-- Swiper for men-women-brand start -->
             <div class="men-women-brand">
                 <div class="swiper men-brand">
-                    <h1 class="brand-title">Men Brands</h1>
+                    <h1>Men Brands</h1>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/perfume.png" alt="">
-                            <h3>Calvin Clein</h3>
-                            <p>price 200</p>
-                            <a href="#">Add to cart</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/perfume.png" alt="">
-                            <h3>Calvin Clein</h3>
-                            <p>price 200</p>
-                            <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -254,61 +347,63 @@
                 </div>
 
                 <div class="swiper women-brand">
-                    <h1 class="brand-title">Women Brands</h1>
+                    <h1>Women Brands</h1>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/perfume.png" alt="">
                             <h3>Calvin Clein</h3>
-                            <p>price 200</p>
+                            <p>Price: 200</p>
                             <a href="#">Add to cart</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/perfume.png" alt="">
-                            <h3>Calvin Clein</h3>
-                            <p>price 200</p>
-                            <a href="#">Add to cart</a>
+                            <i class="fa-sharp fa-regular fa-heart"></i>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -317,6 +412,7 @@
             </div>
         </section>
         <!-- Swiper for men-women-brand end -->
+        <!-- Category section end  -->
 
         <!-- contact section start  -->
         <section id="contact">
@@ -328,11 +424,12 @@
                     voluptates
                     numquam quas aspernatur ratione!
                 </p>
-                <form action="#">
-                    <label for="email-id"></label>
-                    <input type="email" name="email-id" id="email-id" placeholder="Enter email...">
-                    <a>Subscribe</a>
-                </form>
+                <div class="contact-form">
+                    <form action="#">
+                        <input type="email" name="email" id="email" placeholder="Enter email...">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </section>
         <!-- contact section end  -->
@@ -402,6 +499,12 @@
     </footer>
     <!-- footer end -->
 
+    <!-- pwa update message start  -->
+    <div id="snackbar">
+        <p><a id="reload">A new version of this app is available. Click here to update.</a></p>
+    </div>
+    <!-- pwa update message end  -->
+
     <!-- external js link  -->
     <script src="js/index.js"></script>
     <!-- swipper js  -->
@@ -441,13 +544,17 @@
                 prevEl: ".swiper-button-prev",
             },
             breakpoints: {
-                640: {
+                420: {
                     slidesPerView: 2,
-                    spaceBetween: 50,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
                 },
                 768: {
                     slidesPerView: 4,
-                    spaceBetween: 50,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 5,
@@ -464,12 +571,12 @@
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 1,
-                    spaceBetween: 50,
+                    slidesPerView: 2,
+                    spaceBetween: 10,
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 50,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 2,
@@ -486,12 +593,12 @@
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 1,
-                    spaceBetween: 50,
+                    slidesPerView: 2,
+                    spaceBetween: 10,
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 50,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 2,
@@ -500,5 +607,48 @@
             },
         });
     </script>
+
+    <script>
+        // pwa installation updation 
+        // https://codyanhorn.tech/blog/pwa-reload-page-on-application-update
+        // every update requires the changes in cache name in sw.js file 
+        (function () {
+            // Track an updated flag and an activated flag.
+            // When both of these are flagged true the service worker was updated and activated.
+            let updated = false;
+            let activated = false;
+            navigator.serviceWorker.register('/sw.js').then(regitration => {
+                regitration.addEventListener("updatefound", () => {
+                    const worker = regitration.installing;
+                    worker.addEventListener('statechange', () => {
+                        if (worker.state === "activated") {
+                            // Here is when the activated state was triggered from the lifecycle of the service worker.
+                            // This will trigger on the first install and any updates.
+                            activated = true;
+                            checkUpdate();
+                        }
+                    });
+                });
+            });
+
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                // This will be triggered when the service worker is replaced with a new one.
+                // It does not just reload the page right away, so to make sure it is fully activated using the checkUpdate function.
+                updated = true;
+                checkUpdate();
+            });
+
+            function checkUpdate() {
+                let snackbar = document.getElementById('snackbar');
+                if (activated && updated) {
+                    snackbar.classList.add('show');
+                    document.getElementById('reload').addEventListener('click', function () {
+                        window.location.reload();
+                    });
+                }
+            }
+        })();
+    </script>
 </body>
+
 </html>
