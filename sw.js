@@ -8,15 +8,15 @@ self.addEventListener('fetch', () => { });
 
 // Installing the application from service worker 
 async function onInstall(event) {
-    // Telling the service worker to activate right away when an update is pickedup.
-    // In main JavaScript this will trigger 'controllerchange', which we can use to trigger an page reload.
-    event.waitUntil(
-          caches.open(cacheName)
-            .then(cache => cache.addAll([
-              "/", "/AppPicture512.png"
-            ]))
-        );
-    self.skipWaiting();
+  // Telling the service worker to activate right away when an update is pickedup.
+  // In main JavaScript this will trigger 'controllerchange', which we can use to trigger an page reload.
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll([
+        "/", "/AppPicture192.png", "/AppPicture512.png"
+      ]))
+  );
+  self.skipWaiting();
 }
 
 async function onActivate(event) { }

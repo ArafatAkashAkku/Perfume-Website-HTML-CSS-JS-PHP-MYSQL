@@ -5,12 +5,12 @@ const highlight = document.getElementById("bar-highlight");
 
 //back to top button
 let mybutton = document.getElementById("myBtn");
-
 mybutton.onclick = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
+// windows scroll function 
 window.onscroll = () => {
     // scroll effect navbar
     if (scrollY > 80) {
@@ -19,7 +19,6 @@ window.onscroll = () => {
     else {
         navigationBar.style.backgroundColor = "black";
     }
-
     // scroll progress bar
     let cheight = container.offsetHeight - window.innerHeight;
     let cpos = container.getBoundingClientRect();
@@ -27,20 +26,17 @@ window.onscroll = () => {
     let progress = diff / cheight * 100;
     let csswidth = Math.floor(100 - progress);
     highlight.style.width = csswidth + "%";
-
     //back to top button
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
     }
-
 }
 
 // navigation bar on click effect 
 const phoneBar = document.getElementById('phone-bar');
 const phoneNav = document.querySelector('header .middle');
-
 phoneBar.onclick = () => {
     phoneNav.classList.toggle("active")
 
@@ -54,7 +50,6 @@ phoneBar.onclick = () => {
 
 // navigation bar links on click effect 
 const navLinks = document.querySelectorAll('header .middle ul li a');
-
 navLinks.forEach((element) => {
     element.onclick = () => {
         phoneNav.classList.remove("active")
@@ -114,8 +109,8 @@ rejectBtn.onclick = () => {
 }
 
 acceptBtn.onclick = () => {
-    document.cookie = "fname=Arafat; max-age=" + 60 * 60 * 24 * 30;
-    document.cookie = "lname=Akash; max-age=" + 60 * 60 * 24 * 30;
+    document.cookie = "fname=Perfume; max-age=" + 60 * 60 * 24 * 30;
+    document.cookie = "lname=World; max-age=" + 60 * 60 * 24 * 30;
     if (document.cookie) {
         cookieBox.classList.add("hide");
     }
@@ -124,5 +119,5 @@ acceptBtn.onclick = () => {
     }
 }
 
-let check = document.cookie.indexOf("fname=Arafat");
+let check = document.cookie.indexOf("fname=Perfume");
 check != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
